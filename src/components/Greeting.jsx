@@ -2,7 +2,7 @@
 function Greeting(props) {
   return (
     <>
-      <h1>Hello, {props.username}!</h1>
+      <h3>Hello, {props.username}!</h3>
     </>
   );
 }

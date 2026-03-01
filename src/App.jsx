@@ -1,6 +1,6 @@
-import Greeting from "./Greeting.jsx";
-import UserInfo from "./UserInfo.jsx";
-import TaskComponent from "./TaskComponent";
+import Greeting from "./components/Greeting.jsx";
+import Counter from './components/Counter.jsx';
+
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Greeting username="Alice"/>
       <Greeting username="Bob" />
       <hr></hr>
+      <Counter />
     </div>
   );
 }
