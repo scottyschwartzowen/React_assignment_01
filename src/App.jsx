@@ -5,11 +5,8 @@ import TaskComponent from "./TaskComponent";
 function App() {
   return (
     <div>
-      <Greeting />
-      <hr></hr>
-      <UserInfo />
-      <hr></hr>
-      <TaskComponent />
+      <Greeting username="Alice"/>
+      <Greeting username="Bob" />
       <hr></hr>
     </div>
   );
