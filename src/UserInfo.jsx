@@ -1,4 +1,4 @@
-// This is my class component for Task #2
+// This is my class component for Task #4
 import React, { Component } from "react";
 
 class UserInfo extends React.Component {
