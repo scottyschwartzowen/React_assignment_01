@@ -18,23 +18,38 @@ function App() {
 
   return (
     <div>
+      <h2 style={{ color: "darkblue" }}>
+        <em>Task #1</em>
+      </h2>
       <Greeting username='Alice' />
       <Greeting username='Bob' />
       <hr></hr>
+      <h2 style={{ color: "darkblue" }}>
+        <em>Task #2</em>
+      </h2>
       <Counter />
       <hr></hr>
+      <h2 style={{ color: "darkblue" }}>
+        <em>Task #3</em>
+      </h2>
       <ul>
         {tasks.map((task, index) => (
           <li key={index}>{task}</li>
         ))}
       </ul>
       <hr></hr>
+      <h2 style={{ color: "darkblue" }}>
+        <em>Task #4</em>
+      </h2>
       <UserInfo
         name='Scott Schwartz-Owen'
         profession='Web Developer'
         handleClick={handleAlert} // passing handleAlert as function prop to UserInfo component
       />
       <hr></hr>
+      <h2 style={{ color: "darkblue" }}>
+        <em>Task #5</em>
+      </h2>
       <TaskForm />
     </div>
   );
