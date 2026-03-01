@@ -1,6 +1,7 @@
 import Greeting from "./components/Greeting.jsx";
 import Counter from "./components/Counter.jsx";
 import UserInfo from "./components/UserInfo.jsx";
+import TaskForm from "./components/TaskForm.jsx";
 
 function App() {
   const tasks = [
@@ -33,6 +34,8 @@ function App() {
         profession='Web Developer'
         handleClick={handleAlert} // passing handleAlert as function prop to UserInfo component
       />
+      <hr></hr>
+      <TaskForm />
     </div>
   );
 }
