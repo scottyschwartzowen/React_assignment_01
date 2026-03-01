@@ -1,4 +1,4 @@
-# React Assignment #01
+# React Assignment #02
 
 Scott Schwartz-Owen
 Email: s_schwartzowen@mail.fhsu.edu
