@@ -1,6 +1,13 @@
-// This is now my function component for Task #4
+// This is now my function component for Task #2
+import { useState } from "react";
 
-function UserInfo({ name, profession, handleClick }) {
+function UserInfo({ name, profession }) {
+  const [luckyNumber, setLuckyNumber] = useState(0);
+
+  function handleClick() {
+    setLuckyNumber(Math.floor(Math.random() * 100) + 1);
+  }
+
   return (
     <div>
       <h3>
@@ -9,7 +16,8 @@ function UserInfo({ name, profession, handleClick }) {
       <h3>
         <strong>Profession:</strong> {profession}
       </h3>
-      <button onClick={handleClick}>Show Alert</button>
+      <h3>Your lucky number is: {luckyNumber}</h3>
+      <button onClick={handleClick}>Generate New Lucky Number</button>
     </div>
   );
 }

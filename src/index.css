@@ -1,20 +1,136 @@
 * {
-  border: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   display: flex;
   place-items: center;
-  max-width: 500px;
+  max-width: 600px;
   min-height: 100vh;
   padding: 20px;
 }
 
 body {
   font-size: 1.2em;
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   line-height: 1.1;
   background-color: hsl(0, 0%, 80%);
   color: black;
+}
+
+/* Global button style */
+button {
+  padding: 6px 14px;
+  font-size: .9em;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background-color: #e8e8e8;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #d4d4d4;
+}
+
+/* Delete button */
+.tasks-list-row button {
+  background-color: red;
+  color: white;
+  border-color: darkred;
+}
+
+.tasks-list-row button:hover {
+  background-color: darkred;
+}
+
+/* TaskForm */
+.task-form {
+  width: 100%;
+}
+
+.task-form-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.task-form-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.task-form-field input {
+  padding: 6px 10px;
+  font-size: .9em;
+  font-family: inherit;
+  border: 1px solid #999;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.task-form-error {
+  color: red;
+  font-size: 0.75em;
+  margin: 4px 0 0;
+}
+
+/* TaskComponent */
+.task-component {
+  width: 100%;
+}
+
+.task-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.task-controls input {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: .9em;
+  font-family: inherit;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+/* TasksList */
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tasks-list li {
+  margin: 8px 0;
+}
+
+.tasks-list-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tasks-list-row h2 {
+  margin: 0;
+  font-size: 1em;
+  flex: 1;
+}
+
+.tasks-list li p {
+  margin: 2px 0 0 0;
+  font-size: 0.85em;
+  color: #444;
+}
+
+.tasks-empty {
+  font-style: italic;
+  color: #666;
 }

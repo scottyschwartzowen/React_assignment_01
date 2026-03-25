@@ -1,19 +1,20 @@
+import { useState } from "react";
 import Greeting from "./components/Greeting.jsx";
-import Counter from "./components/Counter.jsx";
 import UserInfo from "./components/UserInfo.jsx";
-import TaskForm from "./components/TaskForm.jsx";
+import TaskComponent from "./components/TaskComponent.jsx";
+import newTask from "./components/newTask.js";
+
+const initial_tasks = [
+  newTask("Buy groceries", "Pick up milk, eggs, and bread"),
+  newTask("Buy office supplies", "Pens, notebooks, and sticky notes"),
+  newTask("Complete homework", "PHP midterm, Informatics essay"),
+];
 
 function App() {
-  const tasks = [
-    "Working from home",
-    "Picking up kids",
-    "Going to store",
-    "Writing my screenplay",
-    "Taking a walk",
-  ];
+  const [tasks, setTasks] = useState(initial_tasks);
 
-  const handleAlert = () => {
-    alert("You have added a user's info!");
+  const handleDelete = (id) => {
+    setTasks((prev) => prev.filter((task) => task.id !== id));
   };
 
   return (
@@ -21,36 +22,18 @@ function App() {
       <h2 style={{ color: "darkblue" }}>
         <em>Task #1</em>
       </h2>
-      <Greeting username='Alice' />
-      <Greeting username='Bob' />
-      <hr></hr>
+      <Greeting usernames={["Scotty", "Alice", "Jonas"]} />
+      <hr />
       <h2 style={{ color: "darkblue" }}>
         <em>Task #2</em>
       </h2>
-      <Counter />
-      <hr></hr>
+      <UserInfo name="Scott Schwartz-Owen" profession="Web Developer" />
+      <hr />
       <h2 style={{ color: "darkblue" }}>
-        <em>Task #3</em>
+        <em>Tasks #3, #4, #5</em>
       </h2>
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
-        ))}
-      </ul>
-      <hr></hr>
-      <h2 style={{ color: "darkblue" }}>
-        <em>Task #4</em>
-      </h2>
-      <UserInfo
-        name='Scott Schwartz-Owen'
-        profession='Web Developer'
-        handleClick={handleAlert} // passing handleAlert as function prop to UserInfo component
-      />
-      <hr></hr>
-      <h2 style={{ color: "darkblue" }}>
-        <em>Task #5</em>
-      </h2>
-      <TaskForm />
+      <TaskComponent tasks={tasks} setTasks={setTasks} handleDelete={handleDelete} />
+      <hr />
     </div>
   );
 }

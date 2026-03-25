@@ -1,4 +1,4 @@
-# React Assignment #02
+# React Assignment #Midterm exam
 
 Scott Schwartz-Owen
 Email: s_schwartzowen@mail.fhsu.edu
